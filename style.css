@@ -671,8 +671,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 @media (max-width: 992px) {
   .hero { grid-template-columns: 1fr; gap: 4rem; }
-  .hero-right::before { left: -2rem; width: 100vw; }
-  .quote-stack { position: relative; top: -3rem; left: 1rem; }
+  .hero-right::before { left: -2rem; width: 100vw; top: 0; bottom: auto; height: 350px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+  .image-card { height: 350px; }
+  .quote-stack { position: relative; top: -4rem; left: 0; width: 100%; }
   .projects-layout { grid-template-columns: 1fr; gap: 2rem; }
   .projects-sidebar { display: none; }
   .smalls { grid-template-columns: 1fr; }
