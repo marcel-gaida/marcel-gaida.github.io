@@ -510,10 +510,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   flex-wrap: wrap;
 }
 .tag {
-  background: var(--panel-2);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
   color: var(--muted);
   white-space: nowrap;
   display: inline-flex;
@@ -651,7 +652,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .cv-right {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
 }
 .skills-group h4 {
   font-size: 1.05rem;
@@ -667,6 +667,83 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   font-size: 0.85rem;
   color: var(--text);
   white-space: nowrap;
+}
+
+/* Metric Boxes */
+.metrics-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.metric-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+.metric-box svg {
+  color: var(--accent);
+}
+.metric-val {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.1;
+  font-family: var(--sans);
+}
+.metric-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Education List */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+}
+.edu-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.edu-details {
+  display: flex;
+  flex-direction: column;
+}
+.edu-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+.edu-inst {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.edu-date {
+  font-size: 0.8rem;
+  color: var(--faint);
+  margin-top: 0.15rem;
 }
 
 @media (max-width: 992px) {
